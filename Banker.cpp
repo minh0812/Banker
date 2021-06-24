@@ -107,7 +107,6 @@ void Calculate()
 						cout << current[k] << " ";
 					}
 					cout << "\n";
-					cout << "\nProcess executed without deadlock";
 					come = true;
 					break;
 				}
@@ -116,13 +115,14 @@ void Calculate()
 		if (!come)
 		{
 			cout << "\n\t\t\tDead lock\n\n";
-			break;
+			return;
 		}
 		else
 		{
 			come = false;
 		}
 	}
+	cout << "\nProcess executed without deadlock";
 }
 
 void IMP()
